@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Semcryption</title>
+</head>
+<body>
+    <div class="background">
+        <div style="display: flex; flex-direction: column;" class="gerakAtas">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+        </div>
+        <div style="display: flex; flex-direction: column;" class="gerakBawah">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+        </div>
+        <div style="display: flex; flex-direction: column;" class="gerakAtas">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+        </div>
+        <div style="display: flex; flex-direction: column;" class="gerakBawah">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+        </div>
+        <div style="display: flex; flex-direction: column;" class="gerakAtas">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+        </div>
+        <div style="display: flex; flex-direction: column;" class="gerakBawah">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+        </div>
+        <div style="display: flex; flex-direction: column;" class="gerakAtas">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+        </div>
+        <div style="display: flex; flex-direction: column;" class="gerakBawah">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+        </div>
+        <div style="display: flex; flex-direction: column;" class="gerakAtas">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+        </div>
+        <div style="display: flex; flex-direction: column;" class="gerakBawah">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+        </div>
+        <div style="display: flex; flex-direction: column;" class="gerakAtas">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+        </div>
+        <div style="display: flex; flex-direction: column;" class="gerakBawah">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+            <img src="gambar/Screenshot 2024-11-16 004250.png" alt="">
+        </div>
+        
+    </div>
+    <div class="container">
+        <h1>JARVIS TOLONG ENKRIPSIKAN DAN DEKRIPSIKAN</h1>
+
+        <!-- Dropdown to choose -->
+        <label for="algorithm">Pilih Algoritma:</label>
+        <select id="algorithm" onchange="toggleInputs()">
+            <option value="caesar">Caesar Cipher</option>
+            <option value="vigenere">Vigenère Cipher</option>
+            <option value="stream">Stream Cipher</option>
+            <option value="block">Block Cipher </option>
+            <option value="super">Super encrypt </option>
+
+            
+        </select>
+
+        <!-- Input for Caesar Cipher -->
+        <div id="caesar-input">
+            <label for="shift">Shift (Geser):</label>
+            <input type="number" id="shift" value="3" min="1" max="25">
+        </div>
+
+        <!-- Input for Vigenere Cipher -->
+        <div id="vigenere-input" style="display: none;">
+            <label for="vigenereKey">Kunci Vigenère:</label>
+            <input type="text" id="vigenereKey" placeholder="Masukkan kunci...">
+        </div>
+
+        <!-- Input for Stream Cipher -->
+        <div id="stream-input" style="display: none;">
+            <label for="streamKey">Kunci Stream Cipher:</label>
+            <input type="text" id="streamKey" placeholder="Masukkan kunci...">
+        </div>
+
+        <!-- Input for Block Cipher -->
+        <div id="block-input" style="display: none;">
+            <label for="blockKey">Kunci Block Cipher:</label>
+            <input type="text" id="blockKey" placeholder="Masukkan kunci...">
+        </div>
+
+        <!-- Input for Super Cipher -->
+        <div id="super-input" style="display: none;">
+            <label for="superCaesar">Shift Caesar:</label>
+            <input type="number" id="superCaesar" value="3" min="1" max="25">
+
+            <label for="superVigenere">Kunci Vigenère:</label>
+            <input type="text" id="superVigenere" placeholder="Masukkan kunci...">
+
+            <label for="superStream">Kunci Stream:</label>
+            <input type="text" id="superStream" placeholder="Masukkan kunci...">
+
+            <label for="superBlock">Kunci Block:</label>
+            <input type="text" id="superBlock" placeholder="Masukkan kunci...">
+        </div>
+
+
+        <textarea id="inputText" placeholder="Masukkan plaintext..." rows="4"></textarea>
+
+        <div class="buttons">
+            <button onclick="encryptText()" class="enkripsi">Enkripsi</button>
+            <button onclick="decryptText()" class="">Dekripsi</button>
+        </div>
+
+        <h2>Hasil:</h2>
+        <textarea id="resultText" rows="4" readonly></textarea>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
